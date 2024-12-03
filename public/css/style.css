@@ -14,6 +14,10 @@ body {
     background-color: white;
  }
 
+ .navbar-nav {
+    background-color: white;
+ }
+
  .fa-compass {
     color: #fe424d;
     font-size: 2rem;
@@ -22,6 +26,7 @@ body {
 
  .nav-link {
     color: #222222 !important; 
+    background-color: white;
  }
 
 .f-info-links a {
