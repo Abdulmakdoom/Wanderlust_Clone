@@ -1,0 +1,188 @@
+<% layout('/layouts/boilerplate') %>
+
+<body>
+
+    <style>
+        /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #000;
+}
+
+
+/* Hero Section */
+.hero {
+  flex: 1;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1542317854-9185d70d439b?crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop') no-repeat center center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+    margin-top: 5rem;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: #f3a712;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Booking Form */
+.booking-form {
+    margin-top: 5rem;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+
+.booking-form img {
+    width: 100%;
+    max-width: 300px; 
+    height: 300px; 
+    border-radius: 10px;
+  }
+
+.btn1 {
+    margin-top: 1rem;
+  background:#fe424d;;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s;
+}
+
+
+.btn1 :hover {
+  background: #e08f00;
+  transform: scale(1.05);
+}
+
+/* Animations */
+.animate-text {
+  animation: slide-in 1.5s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.animate-fade {
+  animation: fade-in 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+.animate-slide {
+  animation: slide-from-right 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Keyframes */
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+    </style>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1 class="animate-text">Discover Luxury at <span>Wanderlust Hotels</span></h1>
+      <p class="animate-fade">Find the best deals for your dream vacation. Book your stay now!</p>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="booking-form animate-slide">
+      <h3>Just Book Great Views</h3>
+      <form action="https://wanderlust-clone-eqq7.onrender.com/listings" method="POST">
+        <div class="form-group">
+          <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bHV4dXJ5JTIwaG90ZWx8ZW58MHx8MHx8fDA%3D">
+        </div>
+      
+        <button class="btn1">Explore &nbsp; Now</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+
