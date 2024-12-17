@@ -1,13 +1,99 @@
 <% layout('/layouts/boilerplate') %>
 <body>
-    <div class="row mt-3">
-        <div class="col-8 offset-2" >
+    <style>
+        body {
+    background: linear-gradient(to bottom, #fe424d, pink);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
 
-            <h3>Create a New Listing</h3>
+
+.background-div {
+    background-color: white;
+    margin: auto;
+    margin-top: 1rem;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+.title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+
+.submit-btn {
+    background: #fe424d;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    /* margin-left: 11rem; */
+  
+}
+
+.submit-btn:hover {
+    background: #c73139;
+    transform: scale(1.05);
+}
+
+.submit-btn {    
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    border: 2px solid #ccc; /* Optional for visualization */
+    margin: 20px auto; 
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+    </style>
+
+    
+    <div class="main">
+        <div class="col-8 offset-2 background-div" >
+            <h3 class="title">List Your Hotel</h3>
+            <p class="subtitle">Provide the details of your hotel to reach millions of potential guests.</p>
             <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label for="title" class="form-label">Title</label>
-                    <input name="listing[title]" placeholder="Enter title" type="text" class="form-control" required/> 
+                    <label for="title" class="form-label"><b>Hotel Name</b></label>
+                    <input name="listing[title]" placeholder="Enter hotel name" type="text" class="form-control" required/> 
                     <div class="valid-feedback">
                         Looks good!
                       </div>
@@ -17,48 +103,45 @@
 
                 </div>
                 <div class="mb-3">
-                    <label for="description" class="form-label">Description</label>
-                    <textarea name="listing[description]" class="form-control" required></textarea>
+                    <label for="description" class="form-label"><b>Description</b></label>
+                    <textarea name="listing[description]" class="form-control" placeholder="Provide a detailed description of the hotel" required></textarea>
                     <div class="invalid-feedback">
                         please enter a valid description
                       </div>
                 </div>
     
                 <div class="mb-3"> 
-                    <label for="image" class="form-label">Upload Image File</label>
+                    <label for="image" class="form-label"><b>Upload Image</b></label>
                     <input name="listing[image]" type="file" class="form-control" />
                 </div>
                 <div class="row">
                     <div class="mb-3 col-md-4">
-                        <label for="price" class="form-label">Price</label>
-                        <input name="listing[price]" placeholder="Enter your price" class="form-control" required/> 
+                        <label for="price" class="form-label"><b>Price per Night</b></label>
+                        <input name="listing[price]" placeholder="Enter price per night" class="form-control" required/> 
                         <div class="invalid-feedback">
                             please enter a valid price
                           </div>
                     </div>
                     <div class="mb-3 col-md-8">
-                        <label for="country" class="form-label">Country</label>
-                        <input name="listing[country]" placeholder="Enter country" type="text" class="form-control" required/>
+                        <label for="country" class="form-label"><b>Country</b></label>
+                        <input name="listing[country]" placeholder="Enter hotel country" type="text" class="form-control" required/>
                         <div class="invalid-feedback">
                             please enter a valid country
                           </div>
                     </div>
                 </div>
                 <div class="mb-3"> 
-                    <label for="location" class="form-label">Location</label>
-                    <input name="listing[location]" placeholder="Enter location" type="text" class="form-control" required/>
+                    <label for="location" class="form-label"><b>Location</b></label>
+                    <input name="listing[location]" placeholder="Enter hotel location" type="text" class="form-control" required/>
                     <div class="invalid-feedback">
                         please enter a valid location
                     </div>
                 </div>
 
-                <button class="btn btn-dark add-btn mt-3">Add</button>
-
+                <button class="submit-btn"><b>Submit</b></button>
             </form>
         </div>
     </div>
 
 </body>
-
-
 

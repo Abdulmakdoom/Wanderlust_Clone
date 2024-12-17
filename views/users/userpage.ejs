@@ -1,0 +1,64 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #fe424d, pink) !important;
+  font-family: 'Arial', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+    </style>
+  <!-- User Profile Section -->
+  <div class="profile">
+    <div class="profile-header">
+      <div class="user-avatar animate-fade">
+        <img src="https://img.freepik.com/free-vector/smiling-redhaired-cartoon-boy_1308-174709.jpg?t=st=1733482868~exp=1733486468~hmac=ba8a8107ca267aa43bebb967bec7f9b5436008534939b7ca27db4491f4373f00&w=1060" alt="User Avatar">
+      </div>
+      <h1 class="animate-slide">Welcome, <%= currUser.username %></h1>
+      <p class="user-role">Premium Member</p>
+    </div>
+
+    <!-- User Details Section -->
+    <div class="user-details">
+      <div class="detail-card">
+        <h3>Personal Information</h3>
+        <ul>
+          <li><strong>Email:</strong> <%= currUser.email %></li>
+          <li><strong>Phone:</strong> +91 xxxxxxxxxx</li>
+          <li><strong>Address:</strong> 123 Wanderlust Street, New York</li>
+        </ul>
+      </div>
+
+      <div class="detail-card">
+        <h3>Booking History</h3>
+        <ul>
+          <li>✔️ Luxury Suite, Paris - 3 Nights</li>
+          <li>✔️ Beach Villa, Maldives - 5 Nights</li>
+          <li>✔️ Mountain Cabin, Switzerland - 4 Nights</li>
+        </ul>
+      </div>
+
+      <div class="detail-card">
+        <h3>Membership Benefits</h3>
+        <ul>
+          <li>✔️ 10% off on all bookings</li>
+          <li>✔️ Free room upgrades</li>
+          <li>✔️ Exclusive access to premium lounges</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

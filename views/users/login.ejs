@@ -1,18 +1,38 @@
 <% layout('/layouts/boilerplate') %>
 
-<div class="row mt-3">
-    <h1 class="col-6 offset-3">Login</h1>
-    <div class="col-6 offset-3" >
-        <form action="/login" method="POST" class="needs-validation" novalidate>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input name="username" id="username" type="text" class="form-control" required/> 
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #fe424d, pink);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+    </style>
+    <div class="login-container">
+        <h1 class="title">WanderLust Login</h1>
+        <p class="subtitle">Welcome back to WanderLust</p>
+        <form action="/login" method="POST" class="login-form" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input name="username" type="text" id="username" placeholder="Enter your username" required>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input name="password" id="password" type="password" class="form-control" required/>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input name="password" type="password" id="password" placeholder="Enter your password" required>
             </div>
-            <button class="btn btn-success">Login</button>
-        </form>       
+            <button type="submit" class="login-btn btn-success">Log In</button>
+        </form>
     </div>
-</div>
+</body>
+
+
+

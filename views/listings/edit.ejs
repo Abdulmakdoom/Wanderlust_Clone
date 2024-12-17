@@ -1,13 +1,103 @@
 <% layout('/layouts/boilerplate') %>
 <body>
+
+
+    <style>
+        body {
+    background: linear-gradient(to bottom, #fe424d, pink);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+
+.background-div {
+    background-color: white;
+    margin: auto;
+    margin-top: 1rem;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+.title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+
+.submit-btn {
+    background: #fe424d;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    margin-left: 12.5rem;
+    
+}
+
+.submit-btn:hover {
+    background: #c73139;
+    transform: scale(1.05);
+}
+
+.listings-card img {
+    margin-top: 0.5rem;
+  width: 150% !important;
+  max-width: 350px !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+  border: 1px solid #ddd !important;
+  margin-bottom: 1rem;
+  margin-left: 5.5rem;
+
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+</style>
+
     <div class="row mt-3">
-        <div class="col-8 offset-2" >
+        <div class="col-8 offset-2 background-div" >
             
-            <h3>Edit Listing</h3>
+            <h3 class="title">Edit Hotel Details</h3>
             <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
 
                 <div class="mb-3">
-                    <label for="title" form="form-label">Title</label>
+                    <label for="title" form="form-label">Hotel Name</label>
                     <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required/> 
                     <div class="valid-feedback">
                         Looks good!
@@ -25,8 +115,8 @@
                           </div>
                 </div>
 
-                <div class="card col-6 show-card mt-4 listing-card"> 
-                    Original Image
+                <div class="col-6 show-card mt-4 listings-card"> 
+                    Current Hotel Image
                     <img src="<%= originalImageUrl %>" />
                 </div>
                 <div class="mb-3"> 
@@ -36,7 +126,7 @@
 
                 <div class="row">
                     <div class="mb-3 col-md-4">
-                        <label for="price" form="form-label">Price</label>
+                        <label for="price" form="form-label">Price per Night</label>
                         <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control" required/>
                         <div class="invalid-feedback">
                             please enter a valid price
@@ -60,7 +150,7 @@
                           </div>
                 </div>
 
-                <button class="btn btn-dark edit-btn mt-3">Edit</button>
+                <button class=" submit-btn"> Submit </button>
 
             </form>
         </div>

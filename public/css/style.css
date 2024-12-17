@@ -29,9 +29,26 @@ body {
     background-color: white;
  }
 
+
+ footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.footer-container {
+    height: 5rem;
+}
+footer p {
+    font-size: 1rem;
+}
+
 .f-info-links a {
     text-decoration: none;
-    color: #222222;
+    /* color: #222222; */
+    color: white;
 }
 
 .f-info-links a:hover {
@@ -42,78 +59,40 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .f-info-socials i {
     font-size: 1.2rem;
     margin-right: 1rem;
-
 }
 
 .f-info {
     text-align: center;
-    height: 8rem;
+    height: 5rem;
     display: flex;
-    background-color: #ebebeb;
+    /* background-color: #ebebeb; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: space-evenly;
 }
 
-/* Cards */
-.listing-card {
-    border: none !important;
-    margin-bottom: 2rem;
-    
-}
 
-.card-img-top {
-    border-radius: 1rem !important;
-    width: 100% !important;
-    object-fit: cover !important;
-}
-
-.card-body {
-    padding: 0 !important;
-}
-
-.card-text p {
-    font-weight: 400 !important;
-
-
-}
-
-.listing-link {
-    text-decoration: none;
-}
-
-/* Card Effect */
-
-.card-img-overlay {
-    opacity: 0;
-}
-
-.card-img-overlay:hover {
-    opacity: 0.2;
-    background-color: white;
-}
-
-/* New page */
+/*---------------------------------New page */
 
 .add-btn {
     background-color: #fe424d !important;
     border: none !important;
 }
 
-/* Edit page */
+/*-------------------------------Edit page */
 
 .edit-btn {
     background-color: #fe424d !important;
     border: none !important;
 }
 
-/* Show page(detail image) */
+/*-------------------------Show page(detail image) */
 
 .show-img {
     height: 30vh;
@@ -144,16 +123,895 @@ body {
 }
 
 
- /* Set the size of the map */
-#map {
-    height: 300px;
-    width: 80vh;
+
+/*-------------------------------------------login.ejs */
+
+        /* Base Styles */
+
+
+.login-container {
+    margin: auto;
+    margin-top: 7rem;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
 }
-/* Style the input field */
-#pac-input {
-    margin-top: 10px;
-    height: 35px;
-    width: 300px;
-    padding: 5px;
-    font-size: 14px;
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 1s ease-in-out;
 }
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 5px #6c63ff;
+}
+
+.login-btn {
+    background: #fe424d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.login-btn:hover {
+    background: #c73139;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/*-----------------------------------------signup.ejs */
+
+
+
+.signup-container {
+    margin: auto;
+    margin-top: 7rem;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.signup-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.signup-form input:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 5px #6c63ff;
+}
+
+.signup-btn {
+    background: #fe424d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.signup-btn:hover {
+    background: #c73139;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/*--------------------------------------------front.ejs */
+
+
+/* Hero Section */
+.hero {
+    flex: 1;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1542317854-9185d70d439b?crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop') no-repeat center center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  .hero-content {
+      margin-top: 5rem;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 50%;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content h1 span {
+    color: #f3a712;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Booking Form */
+  .booking-form {
+      margin-top: 5rem;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-form h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+    color: #333;
+  }
+  
+  
+  .booking-form img {
+      width: 100%;
+      max-width: 300px; 
+      height: 300px; 
+      border-radius: 10px;
+    }
+  
+  .btn1 {
+      margin-top: 1rem;
+    background:#fe424d;;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  
+  .btn1:hover {
+    background: #c73139;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  .animate-text {
+    animation: slide-in 1.5s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .animate-fade {
+    animation: fade-in 2s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide {
+    animation: slide-from-right 2s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  /* Keyframes */
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-from-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  @media (max-width: 769px) {
+  
+    .hero {
+      width: 100%;
+      /* margin-right: 4rem; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      
+  
+    }
+    .hero-content {
+      justify-items: center;
+      
+  
+    }
+  
+    .container {
+      margin-left: 0%;
+      margin-right: -10%;
+    }
+  
+    @media (max-width: 412px) {
+  
+      
+      .hero {
+      width: 100%;
+      /* margin-right: 4rem; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      }
+  
+      .hero-content {
+      justify-items: center;
+      /* height: rem; */
+      width: 10rem;
+      margin-right: 1.3rem;
+      }
+  
+      .animate-text {
+        font-size: 1.5rem !important; 
+        
+      }
+  
+
+      .booking-form {
+        height: 18rem;
+        width: 12rem;
+       /* margin-right: 5rem; */
+        justify-content: center;
+        
+      }
+  
+      .booking-form h3 {
+        font-size: 0.9rem;
+        /* margin-top: 1rem; */
+      }
+  
+      .form-group img {
+        width: 8rem;
+        height: 9rem;
+      }
+  
+      .ancher a {
+        width: 7rem;
+        height: 2rem;
+        font-size: 2.5vw;
+        margin-left: 0.7rem;
+        
+      }
+  
+    }
+  
+  }
+
+
+  /*-------------------------------------show.ejs */
+
+
+.hotel-detail-container {
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    align-items: center;
+}
+
+.hotel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hotel-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.hotel-owner {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.actions button {
+    background: #fe424d;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.actions button:hover {
+    background: #c73139 !important;
+    transform: scale(1.05);
+}
+
+.hotel-info {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.hotel-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-details {
+    flex: 2;
+}
+
+.hotel-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hotel-price,
+.hotel-location,
+.hotel-country {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.reviews-section {
+    margin-top: 40px;
+}
+
+.reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.review-form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.review-form select,
+.review-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.review-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-review-btn {
+    background: #fe424d;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.submit-review-btn:hover {
+    background: #c73139;
+    transform: scale(1.05);
+}
+
+.all-reviews .review {
+    height: 12vh;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+
+}
+
+.all-reviews .review p {
+    margin-bottom: 5px;
+}
+
+.all-reviews .review strong {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.all-reviews .review span {
+    font-size: 1rem;
+    color: #777;
+}
+
+.edit-btn {
+    margin-right: 3rem;
+}
+
+.review-delete-btn {
+    background: #fe424d;
+    color: #fff;
+    padding: 5px 9px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s;
+}
+
+.review-delete-btn:hover {
+    background: #c73139;
+    transform: scale(1.05);
+}
+
+.rev-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.star {
+    display: flex;
+}
+
+.starability-result {
+    margin-left: -1rem;
+    font-size: 16px; /* Adjust this value to your preferred size */
+    transform: scale(0.6); /* Optionally, you can scale down the size further */
+    
+}
+
+
+
+/*---------------------------------------index.ejs */
+
+
+
+header {
+    background-color: #fe424d;
+    padding: 15px 0;
+}
+
+
+
+/* Listings Page Styles */
+.listings-container {
+    margin: 40px auto;
+}
+
+.listing-cards {
+    display: flex;
+    justify-content: space-between; /* Distribute the cards evenly */
+    gap: 30px; /* Space between each listing */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+.listing-card {
+    background-color: #fff;
+    width: 30%; /* Three cards per row */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.listing-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hotel-name {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.hotel-location,
+.hotel-description,
+.hotel-price {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.view-details-btn {
+    background-color: #fe424d;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-details-btn:hover {
+    background-color: #c73139;
+    transform: scale(1.05);
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .listing-card {
+        width: 45%; /* 2 cards per row */
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+    .listing-card {
+        width: 100%; /* 1 card per row */
+    }
+
+    .view-details-btn {
+        font-size: 0.9rem; /* Reduce button size slightly */
+        padding: 8px 16px;
+    }
+}
+
+/* Very small screens (extra narrow devices) */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8rem; /* Scale down title */
+    }
+
+    .listing-card {
+        padding: 15px; /* Adjust padding for smaller cards */
+    }
+
+    .view-details-btn {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter {
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.tax-info {
+    display: none;
+}
+
+.tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.25rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*----------------------------------------userpage.ejs */
+
+
+
+/* Profile Section */
+.profile {
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+    position: relative;
+  }
+  
+  .profile-header {
+    margin-bottom: 2rem;
+  }
+  
+  .user-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+  }
+  
+  .profile-header h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  
+  .user-role {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  
+  /* User Details */
+  .user-details {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .detail-card {
+    background: #fff;
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .detail-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detail-card ul {
+    list-style: none;
+  }
+  
+  .detail-card li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+
+  
+  /* Animations */
+  .animate-fade {
+    animation: fade-in 1.5s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide {
+    animation: slide-in 1.5s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

@@ -1,5 +1,10 @@
 const User = require("../models/user.js");
 
+module.exports.profile = (req, res) => {
+    res.render("users/userpage.ejs")
+}
+
+
 module.exports.renderSignupForm = (req, res)=> {
     res.render("users/signup.ejs")
 }

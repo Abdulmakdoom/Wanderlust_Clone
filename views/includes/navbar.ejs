@@ -1,16 +1,13 @@
 <style>
 
-  .search-btn {
-    background-color: #fe424d;
-    color: #fff;
-    border-radius: 25px;
-    padding: 0 1rem, 0, 1rem;
-  }
-  .search-btn:hover {
-    background-color: #fe424d;
-    color: #fff;
-  }
-  .search-btn i {
+
+/* navbar.ejs */
+
+
+
+
+
+.search-btn i {
     display: inline;
     margin-right: 0.5rem;
   }
@@ -20,35 +17,263 @@
     font-size: 1rem;
 
   }
+
+  .logo {
+    color: #fe424d;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .logo-i {
+    margin-right: 2rem;
+}
+
+
+.navbar-toggler {
+    background-color: #fe424d;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.container-fluid {
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+
+.search-btn {
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0 1rem, 0, 1rem;
+  }
+  .search-btn:hover {
+    background: #c73139;
+    color: #fff;
+  }
+  
+
+.logout {
+  background-color: #fe424d;
+  color: white !important;
+  border-radius: 10px;
+}
+
+.logout:hover {
+    background: #c73139;
+  }
+
+.user-name-logout {
+  display: flex;
+}
+
+/* .user-name {
+  font-weight: bold;
+  font-weight: 800;
+} */
+
+/* .form-control {
+  justify-content: space-around;
+  width: 22rem;
+} */
+
+/* Adjustments for Extra Small Screens */
+@media (max-width: 895px) {
+
+  .nav-link {
+    justify-content: space-around;
+    width: 5rem;
+    height: auto;
+    align-content: center;
+  }
+   
+  .user-name-logout a {
+    display: flex;  /* Align the anchor tags side by side */
+    margin-left: -1.3rem !important;
+    /* gap: 0; */  /* Removes any gap between flex items */
+  }
+
+  .user-name {
+    margin-right: 1rem;
+  }
+
+
+  .home {
+    justify-content: space-around;
+    width: 10rem;
+  }
+
+  .explore {
+    justify-content: space-around;
+    /* margin-left: -1.5rem; */
+  }
+}
+
+/* ---------pop up */
+
+    /* Hidden checkbox */
+    #popup-toggle {
+      display: none;
+    }
+
+    /* Popup background overlay */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Show overlay when checkbox is checked */
+    #popup-toggle:checked + .popup-overlay {
+      display: flex;
+    }
+
+    /* Popup message box */
+    .popup-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .popup-box h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .popup-box p {
+      margin: 0 0 20px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    .popup-box .confirm-logout-btn,
+    .popup-box .cancel-logout-btn {
+      padding: 10px 15px;
+      font-size: 14px;
+      margin: 5px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease !important;
+      flex: 1 !important;
+      
+    }
+
+    .pop-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .popup-box .confirm-logout-btn {
+      background-color: #fe424d !important;
+      color: white !important;
+      text-decoration: none;
+    }
+
+    .popup-box .confirm-logout-btn:hover {
+      background-color: #c73139 !important;
+     
+    }
+
+    .popup-box .cancel-logout-btn {
+      background-color: #e0e0e0 !important;
+      color: #333 !important;
+      font-weight: bold;
+      
+    }
+
+    .popup-box .cancel-logout-btn:hover {
+      background-color: #d6d6d6 !important;
+    }
+
+    .logout {
+      font-weight: bold;
+    }
+
+     /* Animation */
+     @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+
+
 </style>
+
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="https://wanderlust-clone-eqq7.onrender.com"><i class="fa-regular fa-compass"></i></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="https://wanderlust-clone-eqq7.onrender.com/listings">Explore</a>
-        </div>
+      <div class="logo-i">
+        <a href="http://localhost:8080/" class="logo">WanderLust</a>
+      </div>
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link explore" href="http://localhost:8080/listings">Explore</a>  
+                
+          </div>
 
-        <div class="navbar-nav ms-auto">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations">
-            <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-          </form>
-        </div>
+          
+          <div class="navbar-nav ms-auto">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations">
+              <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+            </form>
+          </div>
 
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="https://wanderlust-clone-eqq7.onrender.com/listings/new">Airbnb your home</a>
-          <% if(!currUser) { %>  
-          <a class="nav-link" href="/signup"><b>Sign up</b></a>
-          <a class="nav-link" href="/login"><b>Log in</b></a>
-          <% } %>
-          <% if(currUser) { %> 
-          <a class="nav-link" href="/logout"><b>Log out</b></a>
-          <% } %>
-        </div>
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link  home" href="http://localhost:8080/listings/new">Airbnb your home</a>
+            <% if(!currUser) { %>  
+            <a class="nav-link" href="/signup"><b>Sign up</b></a>
+            <a class="nav-link" href="/login"><b>Log in</b></a>
+            <% } %>
+            <% if(currUser) { %> 
+              <div class="user-name-logout">
+                <a class="nav-link user-name" href="/profile"><b><%= currUser.username %></b></a>
+                
+                <label for="popup-toggle" class="nav-link logout">Log out</label>
+
+                    <!-- Hidden checkbox -->
+                    <input type="checkbox" id="popup-toggle">
+
+                    <!-- Popup Overlay -->
+                    <div class="popup-overlay">
+                        <div class="popup-box">
+                            <h2>Confirm Log out</h2>
+                            <p>Are you sure you want to log out?</p>
+                            <div class="pop-btn">
+                                <label for="popup-toggle" class="cancel-logout-btn">Cancel</label>
+                                <a class="confirm-logout-btn" onclick="alert('You have logged out!')" href="/logout"><b>Log out</b></a>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            <% } %>
+          </div>
       </div>
     </div>
   </nav>
+
