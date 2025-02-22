@@ -219,12 +219,13 @@
 
 
 
-</style>
+</style> 
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+
+<!-- <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
       <div class="logo-i">
-        <a href="https://wanderlust-clone-eqq7.onrender.com/" class="logo">WanderLust</a>
+        <a href="https://wanderlust-clone-eqq7.onrender.com/"  id="explore-link" class="logo">WanderLust</a>
       </div>
       
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
@@ -256,10 +257,10 @@
                 
                 <label for="popup-toggle" class="nav-link logout">Log out</label>
 
-                    <!-- Hidden checkbox -->
+                    
                     <input type="checkbox" id="popup-toggle">
 
-                    <!-- Popup Overlay -->
+                   
                     <div class="popup-overlay">
                         <div class="popup-box">
                             <h2>Confirm Log out</h2>
@@ -275,5 +276,86 @@
           </div>
       </div>
     </div>
+  </nav> -->
+
+
+
+
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <div class="logo-i">
+      <a href="#"  id="logo-link" class="logo">WanderLust</a>
+    </div>
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link explore" href="#"  id="explore-link-nav">Explore</a>  
+              
+        </div>
+
+        
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations">
+            <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          </form>
+        </div>
+
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link  home" href="#"  id="add-new-motel">Add New Motel</a>
+          <% if(!currUser) { %>  
+            <a class="nav-link" href="/signup"><b>Sign up</b></a>
+            <a class="nav-link" href="/login"><b>Log in</b></a>
+            <% } %>
+            <% if(currUser) { %> 
+              <div class="user-name-logout">
+                <a class="nav-link user-name" href="/profile"><b><%= currUser.username %></b></a>
+                
+                <label for="popup-toggle" class="nav-link logout">Log out</label>
+  
+                   
+                    <input type="checkbox" id="popup-toggle">
+  
+                   
+                    <div class="popup-overlay">
+                        <div class="popup-box">
+                            <h2>Confirm Log out</h2>
+                            <p>Are you sure you want to log out?</p>
+                            <div class="pop-btn">
+                                <label for="popup-toggle" class="cancel-logout-btn">Cancel</label>
+                                <a class="confirm-logout-btn" onclick="alert('You have logged out!')" href="/logout"><b>Log out</b></a>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            <% } %>
+          </div>
+      </div>
+    </div>
+    <script>
+     
+      const isLocal = window.location.hostname === 'localhost'; // Check if it's a local environment
+  
+      // Set the dynamic link for the logo
+      document.getElementById('logo-link').href = isLocal ? 'http://localhost:8080/' : 'https://wanderlust-clone-eqq7.onrender.com/';
+  
+      // Set the dynamic link for the Explore navbar item
+      document.getElementById('explore-link-nav').href = isLocal ? 'http://localhost:8080/listings' : 'https://wanderlust-clone-eqq7.onrender.com/listings';
+  
+      // If needed, set a dynamic link for the "Add New Motel" button as well
+      document.getElementById('add-new-motel').href = isLocal ? 'http://localhost:8080/listings/new' : 'https://wanderlust-clone-eqq7.onrender.com/listings/new';
+  </script>
   </nav>
+  
+  
+  
+  
+  
+
+
+
 

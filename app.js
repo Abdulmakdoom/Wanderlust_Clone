@@ -1,3 +1,5 @@
+// npx nodemon app.js
+
 if (process.env.NODE_ENV != "production") {
     require('dotenv').config();
 }
