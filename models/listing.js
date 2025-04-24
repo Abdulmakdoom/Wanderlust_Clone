@@ -29,7 +29,7 @@ const listingSchema = new Schema ({
     },
 })
 
-listingSchema.post("findOneAndDelete", async (listing)=> { 
+listingSchema.post("findOneAndDelete", async (listing)=> {  // jaha bhi listing main "findOneAndDelete == findByIdAndDelete" yaha use hoga toh bo ish "async (listing)=> {}" middleware ko run kr dega
     if(listing) {
         await Review.deleteMany({_id: {$in: listing.reviews}})  
     }

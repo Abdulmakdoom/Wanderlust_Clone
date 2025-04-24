@@ -75,7 +75,7 @@ body {
         <div class="listing-cards">
             <% for (let listing of allListings) { %>
                 <div class="listing-card">
-                    <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem"/>
+                    <img src="<%= listing.image.url %>" class="card-img-top" loading="lazy" alt="listing_image" style="height: 20rem"/>
                     <h2 class="hotel-name"><%= listing.title %></h2>
                     <p class="hotel-location"><%= `${listing.location},${listing.country}` %></p>
                     <p class="hotel-price">&#8377 <%= listing.price.toLocaleString("en-IN")%> per night <i class="tax-info"> &nbsp; &nbsp;+18% GST</i></p>
